@@ -2,6 +2,7 @@ import AppHeader from './components/AppHeader'
 import getCharacters from './services/getCharacters'
 import Card from './components/Card'
 import createElement from './lib/createElement'
+import HomePage from './components/HomePage'
 
 export default function App() {
   const header = AppHeader('Harry Potter App')
