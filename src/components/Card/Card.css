@@ -1,5 +1,12 @@
 .Card {
   color: var(--color-primary);
-  border-bottom: 1px solid;
+  border: 1px solid;
   padding: 12px;
+  background: #eee;
+  margin: 20px;
+}
+
+.Card__images {
+  width: 80%;
+  height: 80%;
 }
