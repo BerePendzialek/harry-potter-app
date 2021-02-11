@@ -2,14 +2,14 @@ import './Card.css'
 import createElement from '../../lib/createElement'
 import Button from '../Button/Button'
 
-export default function Card(name, imageUrl) {
+export default function Card(name, image) {
   const questionEl = createElement('h2', {
     innerText: 'Who is this character?',
   })
   const buttonEl = Button('Show answer')
   const imagesEl = createElement('img', {
     className: 'Card__images',
-    src: `${imageUrl}`,
+    src: `${image}`,
     alt: '',
   })
   const twoAnswers = createElement('div', {
@@ -36,8 +36,8 @@ export default function Card(name, imageUrl) {
 // ASK FOR THE LOGIC
 function showRandomName(max) {
   const randomIndex = getRandom(`${name}`.length - 1)
-  const ShownRandom = index !== randomIndex
-  return ShownRandom
+  const shownRandom = index !== randomIndex
+  return shownRandom
 }
 
 function getRandom(max) {

@@ -8,12 +8,9 @@ export default function App() {
   const header = AppHeader('Harry Potter App')
   document.body.append(header)
 
-  // fetch API
   getCharacters()
     .then(characters => createCards(characters))
     .catch(error => handleGetCharacterError(error))
-  //.then(data => console.log(data))
-  //.catch(error => console.log(error))
 
   function createCards(characters) {
     const cards = characters.map(character =>
