@@ -1,0 +1,14 @@
+.CardFoto {
+  color: var(--color-purple);
+  border: 2px solid var(--color-purple);
+  border-radius: 5px;
+  padding: 12px;
+  background: var(--color-yellow);
+  margin: 20px;
+  font-size: 14px;
+}
+
+.CardFoto__images {
+  width: 80%;
+  height: 80%;
+}

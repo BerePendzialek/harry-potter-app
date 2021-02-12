@@ -1,4 +1,3 @@
-import Card from '../Card'
 import './HomePage.css'
 import createElement from '../../lib/createElement'
 

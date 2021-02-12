@@ -1,47 +1,36 @@
 import './Card.css'
 import createElement from '../../lib/createElement'
-import Button from '../Button/Button'
 
-export default function Card(name, image) {
-  const questionEl = createElement('h2', {
-    innerText: 'Who is this character?',
-  })
+export default function Card({ name, house, image }) {
+  const color = getColorByHouse(house)
 
-  const imagesEl = createElement('img', {
-    className: 'Card__images',
-    src: `${image}`,
+  const heading = createElement('h2', { className: 'Card__heading' }, name)
+  const houseEl = createElement(
+    'span',
+    { className: 'Card__house', style: `color: ${color}` },
+    house
+  )
+
+  const imageEl = createElement('img', {
+    className: 'Card__image',
+    src: image,
     alt: '',
-  })
-  const twoAnswers = createElement('div', {
-    innerHTML: `<button>${name}</button>
-  <button> Other Random Name
-  </button>`,
-  })
-
-  const answerEl = createElement('p', { hidden: true, innerText: `${name}` })
-
-  const buttonEl = Button('Show answer', () => {
-    answerEl.hidden = !answerEl.hidden
   })
 
   return createElement(
     'section',
     { className: 'Card' },
-    questionEl,
-    imagesEl,
-    twoAnswers,
-    answerEl,
-    buttonEl
+    heading,
+    houseEl,
+    imageEl
   )
 }
 
-// ASK FOR THE LOGIC
-function showRandomName(max) {
-  const randomIndex = getRandom(`${name}`.length - 1)
-  const shownRandom = index !== randomIndex
-  return shownRandom
-}
-
-function getRandom(max) {
-  return Math.floor(Math.random() + (max + 1))
+function getColorByHouse(house) {
+  return {
+    Gryffindor: 'crimson',
+    Hufflepuff: 'goldenrod',
+    Ravenclaw: 'cornflowerblue',
+    Slytherin: 'forestgreen',
+  }[house]
 }

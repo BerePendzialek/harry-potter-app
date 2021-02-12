@@ -5,5 +5,4 @@ export default {
   component: Button,
 }
 
-export const base = () => Button('Hello')
-export const longText = () => Button('This is a long text')
+export const defaultButton = () => Button('Text').el

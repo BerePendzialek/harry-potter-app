@@ -1,8 +1,11 @@
-import Card from './Card'
-
+import Card from './Card.js'
 export default {
   title: 'Card',
   component: Card,
 }
-
-export const defaultCard = () => Card('Harry Potter')
+export const defaultCard = () =>
+  Card({
+    name: 'Harry Potter',
+    house: 'Gryffindor',
+    image: 'http://hp-api.herokuapp.com/images/harry.jpg',
+  })

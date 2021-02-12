@@ -1,5 +1,5 @@
 import './HouseFilter.css'
-import Button from '.../Button'
+import Button from '../Button'
 import createElement from '../../lib/createElement'
 
 export default function HouseFilter(onFilterByHouse) {
