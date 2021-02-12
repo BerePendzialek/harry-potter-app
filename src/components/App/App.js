@@ -9,6 +9,7 @@ export default function App() {
   const header = AppHeader('Harry Potter App')
   const houseFilter = HouseFilter(onFilterByHouse)
   const cardContainer = createElement('div')
+
   const app = createElement(
     'div',
     { className: 'App' },
@@ -30,7 +31,7 @@ export default function App() {
   function onFilterByHouse(house) {
     console.log('App says: ', house)
     const filteredCharacters = characters.filter(
-      character => character.house === house
+      character => house == null || character.house === house
     )
 
     createCards(filteredCharacters)
