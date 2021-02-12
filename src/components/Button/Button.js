@@ -1,11 +1,24 @@
 import createElement from '../../lib/createElement'
 import './Button.css'
 
-export default function Button(text) {
-  const el = createElement('button', {
-    className: 'Button',
-    textContent: text,
-  })
+export default function Button(text, onClick) {
+  const el = createElement(
+    'button',
+    {
+      className: 'Button',
+    },
+    text
+  )
 
-  return el
+  el.addEventListener('click', onClick)
+
+  function toogle() {
+    el.classList.toogle('selected')
+  }
+
+  function updateText(text) {
+    el.innerText = text
+  }
+
+  return { el, updateText, toogle }
 }

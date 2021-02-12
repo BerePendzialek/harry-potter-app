@@ -6,7 +6,7 @@ export default function Card(name, image) {
   const questionEl = createElement('h2', {
     innerText: 'Who is this character?',
   })
-  const buttonEl = Button('Show answer')
+
   const imagesEl = createElement('img', {
     className: 'Card__images',
     src: `${image}`,
@@ -17,19 +17,21 @@ export default function Card(name, image) {
   <button> Other Random Name
   </button>`,
   })
+
   const answerEl = createElement('p', { hidden: true, innerText: `${name}` })
 
-  buttonEl.addEventListener('click', () => {
+  const buttonEl = Button('Show answer', () => {
     answerEl.hidden = !answerEl.hidden
   })
+
   return createElement(
     'section',
     { className: 'Card' },
     questionEl,
     imagesEl,
     twoAnswers,
-    buttonEl,
-    answerEl
+    answerEl,
+    buttonEl
   )
 }
 
