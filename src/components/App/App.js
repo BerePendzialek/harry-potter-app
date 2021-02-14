@@ -1,21 +1,24 @@
-import AppHeader from '../AppHeader'
+import createElement from '../../lib/createElement'
 import getCharacters from '../../services/getCharacters'
+import './App.css'
+import AppHeader from '../AppHeader'
 import Card from '../Card'
 import HouseFilter from '../HouseFilter'
-import createElement from '../../lib/createElement'
-import './App.css'
+import Navigation from '../Navigation'
 
 export default function App() {
   const header = AppHeader('Harry Potter App')
   const houseFilter = HouseFilter(onFilterByHouse)
   const cardContainer = createElement('div')
+  const navigation = Navigation()
 
   const app = createElement(
     'div',
     { className: 'App' },
     header,
     houseFilter,
-    cardContainer
+    cardContainer,
+    navigation
   )
 
   let characters
@@ -51,5 +54,6 @@ export default function App() {
     )
     app.append(errorMessage)
   }
+
   return app
 }
