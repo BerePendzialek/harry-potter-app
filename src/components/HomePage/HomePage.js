@@ -1,8 +1,28 @@
 import './HomePage.css'
 import createElement from '../../lib/createElement'
 
-export default function HomePage(cards) {
-  const el = createElement('main', { className: 'HomePage', hidden: false })
+//import randomFoto from 'https://picsum.photos/200/300.jpg'
 
-  return el
+export default function HomePage() {
+  const imageEl = createElement('img', {
+    className: 'HomePage__image',
+    src: 'https://picsum.photos/200.jpg',
+    alt: '',
+  })
+
+  const describeEl = createElement('section', {
+    className: 'HomePage__description',
+    innerHTML: `
+<h2>A must have quiz App for the true Harry Potter fans!</h2><br>
+<h3> Play to recognize the movie characters, get their information or create your own character. <br>
+Have fun!</h3>
+`,
+  })
+
+  return createElement(
+    'main',
+    { className: 'HomePage', hidden: false },
+    imageEl,
+    describeEl
+  )
 }
