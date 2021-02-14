@@ -13,16 +13,16 @@ const buttonsConfig = [
   { svgPath: createCharacterSVG, text: '+ Character' },
 ]
 
-export default function Navigation() {
+export default function Navigation(onNavigate) {
   const buttons = buttonsConfig.map(({ svgPath, text }) => {
     const button = createElement(
       'button',
       { className: 'Navigation__button' },
-      createElement('img', { src: svgPath, alt: '' }),
+      createElement('img', { src: svgPath, alt: text }),
       text
     )
 
-    //button.addEventListener('click', () => onNavigate(text))
+    button.addEventListener('click', () => onNavigate(text))
     return button
   })
 

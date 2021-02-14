@@ -16,11 +16,25 @@ export default function HomePage() {
 Have fun!</h3>
 `,
   })
-
-  return createElement(
+  const el = createElement(
     'main',
     { className: 'HomePage', hidden: false },
     imageEl,
     describeEl
   )
+
+  function show() {
+    el.hidden = false
+  }
+
+  function hide() {
+    el.hidden = true
+  }
+
+  return {
+    el,
+
+    show,
+    hide,
+  }
 }
