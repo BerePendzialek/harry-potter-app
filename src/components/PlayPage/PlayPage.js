@@ -3,12 +3,21 @@ import './PlayPage.css'
 import '../CardFoto'
 import CardFoto from '../CardFoto'
 
-export default function PlayPage() {
-  const cardFoto = CardFoto(cardsFoto)
+export default function PlayPage(hidden) {
+  const cardFoto = CardFoto()
+  const el = createElement('main', { className: 'PlayPage', hidden }, cardFoto)
 
-  return createElement(
-    'main',
-    { className: 'PlayPage', hidden: true },
-    cardFoto
-  )
+  function show() {
+    el.hidden = false
+  }
+
+  function hide() {
+    el.hidden = true
+  }
+
+  return {
+    el,
+    show,
+    hide,
+  }
 }

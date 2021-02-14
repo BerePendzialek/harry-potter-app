@@ -1,8 +1,6 @@
 import './HomePage.css'
 import createElement from '../../lib/createElement'
 
-//import randomFoto from 'https://picsum.photos/200/300.jpg'
-
 export default function HomePage() {
   const imageEl = createElement('img', {
     className: 'HomePage__image',

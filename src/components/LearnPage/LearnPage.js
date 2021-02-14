@@ -1,10 +1,10 @@
 import createElement from '../../lib/createElement'
-import getCharacters from '../../services/getCharacters'
+import getCharacters from '../../Services/getCharacters'
 import './LearnPage.css'
 import Card from '../Card'
 import HouseFilter from '../HouseFilter'
 
-export default function LearnPage() {
+export default function LearnPage(hidden) {
   const houseFilter = HouseFilter(onFilterByHouse)
   const cardContainer = createElement('div')
   const el = createElement(

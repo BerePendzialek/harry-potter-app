@@ -5,4 +5,4 @@ export default {
   component: PlayPage,
 }
 
-export const base = () => PlayPage()
+export const base = () => PlayPage().el
