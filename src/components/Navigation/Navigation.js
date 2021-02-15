@@ -10,7 +10,7 @@ const buttonsConfig = [
   { svgPath: homeSVG, text: 'Home' },
   { svgPath: playSVG, text: 'Play' },
   { svgPath: learnSVG, text: 'Learn' },
-  { svgPath: createCharacterSVG, text: '+ Character' },
+  { svgPath: createCharacterSVG, text: 'Character' },
 ]
 
 export default function Navigation(onNavigate) {

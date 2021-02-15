@@ -1,4 +1,3 @@
-import createElement from '../../lib/createElement'
 import './App.css'
 import Grid from '../Grid'
 import AppHeader from '../AppHeader'
@@ -26,6 +25,8 @@ export default function App() {
   )
   document.body.append(grid)
 
+  onNavigate('Home')
+
   function onNavigate(text) {
     if (text === 'Home') {
       homePage.show()
@@ -51,7 +52,7 @@ export default function App() {
       header.setText('Learn more')
     }
 
-    if (text === '+ Character') {
+    if (text === 'Character') {
       homePage.hide()
       playPage.hide()
       learnPage.hide()
