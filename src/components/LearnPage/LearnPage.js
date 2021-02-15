@@ -45,7 +45,7 @@ export default function LearnPage(hidden) {
       { style: 'color: crimson;' },
       error.message
     )
-    app.append(errorMessage)
+    el.append(errorMessage)
   }
 
   function show() {

@@ -1,7 +1,7 @@
 import createElement from '../../lib/createElement'
 import './CreatePage.css'
-import '../CreateForm'
 import CreateForm from '../CreateForm'
+
 
 export default function CreatePage(hidden) {
   const form = CreateForm()
