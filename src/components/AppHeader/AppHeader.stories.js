@@ -5,4 +5,4 @@ export default {
   component: AppHeader,
 }
 
-export const JS = () => AppHeader('JS Title')
+export const JS = () => AppHeader('JS Title').el

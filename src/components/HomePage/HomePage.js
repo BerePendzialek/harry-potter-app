@@ -33,7 +33,6 @@ Have fun!</h3>
 
   return {
     el,
-
     show,
     hide,
   }

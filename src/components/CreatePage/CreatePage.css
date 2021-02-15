@@ -1,3 +1,4 @@
 .CreatePage {
   display: grid;
+  overflow-y: scroll;
 }

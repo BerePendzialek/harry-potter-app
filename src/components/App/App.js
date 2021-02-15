@@ -16,9 +16,7 @@ export default function App() {
   const createPage = CreatePage()
   const navigation = Navigation(onNavigate)
 
-  const app = createElement(
-    'div',
-    { className: 'App' },
+  const grid = Grid(
     header,
     homePage,
     playPage,
@@ -26,6 +24,7 @@ export default function App() {
     createPage,
     navigation
   )
+  document.body.append(grid)
 
   function onNavigate(text) {
     if (text === 'Home') {
@@ -33,7 +32,7 @@ export default function App() {
       playPage.hide()
       learnPage.hide()
       createPage.hide()
-      header.setText('Harry Pottr App')
+      header.setText('Harry Potter App')
     }
 
     if (text === 'Play') {
@@ -60,6 +59,4 @@ export default function App() {
       header.setText('Create yor character')
     }
   }
-
-  return app
 }
